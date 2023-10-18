@@ -1,12 +1,11 @@
 let playerScore = 0;
 let computerScore = 0;
 let roundWinner = "";
+let endGame = "";
 
-const playerPreInput = prompt("Rock, Paper or Scissors?");
-const playerSelection = playerPreInput.toLowerCase();
+let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
 const computerSelection = getComputerChoice();
 
-// Randomly selects rock, paper or scissors
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random()*3);
     if (randomNumber === 0) {
@@ -18,7 +17,6 @@ function getComputerChoice() {
     }
 }
 
-// A round of rock, paper and scissors
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return roundWinner = "tie"
@@ -37,4 +35,29 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection))
+function game() {
+    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playRound(playerSelection, computerSelection)
+    console.log(roundWinner)
+    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playRound(playerSelection, computerSelection)
+    console.log(roundWinner)
+    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playRound(playerSelection, computerSelection)
+    console.log(roundWinner)
+    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playRound(playerSelection, computerSelection)
+    console.log(roundWinner)
+    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playRound(playerSelection, computerSelection)
+    console.log(roundWinner)
+    if (playerScore > computerScore) {
+        return "You won with a score of: " + playerScore;
+    } else if (playerScore < computerScore) {
+        return "You lost, the computer won with a score of: " + computerScore; 
+    } else {
+        return "no one won, the scor sits at " + playerScore + " and " + computerScore
+    }
+}
+
+console.log(game())
