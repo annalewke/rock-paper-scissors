@@ -1,0 +1,37 @@
+.buttons {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    border-style: none;
+    color: rgb(235, 235, 235);
+    background-color: rgb(86, 34, 190);
+    padding: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    color: rgb(131, 131, 131);
+    text-align: center;
+}
+
+#score {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+#playerwins, #comwins {
+    font-size: 18px;
+    color: black;
+}
